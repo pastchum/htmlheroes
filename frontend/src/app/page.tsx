@@ -1,5 +1,5 @@
 import Instructions from "@/components/instructions";
-import Upload from "@/components/upload";
+import UploadForm from "@/components/uploadForm";
 
 export default function Home() {
   return (
@@ -7,7 +7,7 @@ export default function Home() {
       <main className="flex flex-col gap-8 row-start-2 items-stretch sm:items-start">
         <div className="flex sm:flex-row flex-col justify-stretch justify-items-start p-5 w-full">
           <Instructions />
-          <Upload />
+          <UploadForm />
         </div>
       </main>
     </div>

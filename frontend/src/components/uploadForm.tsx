@@ -2,14 +2,14 @@
 
 import { useState } from "react";
 
-export default function Upload() {
+export default function UploadForm() {
   const [file, setFile] = useState(null);
 
-  const handleFileChange = (event) => {
+  const handleFileChange = (event: any) => {
     setFile(event.target.files[0]);
   };
 
-  const handleSubmit = async (event) => {
+  const handleSubmit = async (event: any) => {
     if (!file) {
       alert("Please submit a file for your resume.");
       return;
