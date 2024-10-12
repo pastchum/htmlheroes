@@ -5,7 +5,7 @@ export default function Header() {
         <div className="font-mono">
           <div className="text-4xl flex-row flex">
             <h1>Resu</h1>
-            <div className="font-bold text-teal-500">RECT</div>
+            <div className="font-extrabold text-teal-500">RECT</div>
           </div>
           Rectify Your Resume
         </div>
