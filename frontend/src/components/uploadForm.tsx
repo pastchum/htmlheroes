@@ -24,13 +24,11 @@ export default function UploadForm() {
     setUploading(true);
 
     try {
-      const response = await fetch(
-        "https://12c5-116-86-209-71.ngrok-free.app/upload",
-        {
-          method: "POST",
-          body: formData,
-        }
-      );
+      const api: URL = new URL(process.env.NEXT_PUBLIC_API_KEY as string);
+      const response = await fetch(api, {
+        method: "POST",
+        body: formData,
+      });
 
       if (response.ok) {
         alert("File uploaded successfully!");
