@@ -16,8 +16,13 @@ export default function DisplayResults() {
   return (
     <div className="w-full h-full border-2 m-2 rounded-xl shadow md:overflow-y-auto md: h-100vh">
       <div className="justify-between flex-row flex">
-        <div className="p-2 text-4xl text-slate-700 font-extrabold flex">
-          YOUR <div className="text-teal-500 px-2"> RESUME</div>
+        <div>
+          <div className="p-2 text-4xl text-slate-700 font-extrabold flex">
+            YOUR <div className="text-teal-500 px-2"> RESUME</div>
+          </div>
+          <div className=" pl-3 text-sm font-bold text-slate-400">
+            Here are the insights into your resume
+          </div>
         </div>
         <button
           onClick={handleNewUploadRequest}
@@ -30,9 +35,7 @@ export default function DisplayResults() {
       </div>
       <div className="flex flex-col md:flex-row justify-items-stretch">
         <DisplayTraits />
-        <div className="flex flex-col justify-items-stretch">
-          <CareerPaths />
-        </div>
+        <CareerPaths />
       </div>
       <div className="flex flex-row-reverse">
         <button onClick={handleNewUploadRequest} className="md:hidden">

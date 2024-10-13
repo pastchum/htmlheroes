@@ -39,15 +39,15 @@ const RadarChart = ({ skillsData }: SkillsDataProps) => {
         }
 
         const data = {
-          labels: ["Languages", "Models", "Frameworks", "Others"],
+          labels: ["Languages", "Models", "Frameworks", "APIs", "Others"],
           datasets: [
             {
               label: "Skills",
               data: skillsData,
-              backgroundColor: "rgba(0, 123, 255, 0.2)",
-              borderColor: "rgba(0, 123, 255, 1)",
+              backgroundColor: "rgba(0, 123, 128, 0.2)",
+              borderColor: "rgba(0, 123, 128, 1)",
               borderWidth: 2,
-              pointBackgroundColor: "rgba(0, 123, 255, 1)",
+              pointBackgroundColor: "rgba(0, 123, 128, 1)",
             },
           ],
         };

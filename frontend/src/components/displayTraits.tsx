@@ -2,8 +2,9 @@ import RadarChart from "./radarChart";
 import { useUpload } from "@/context/UploadContext";
 
 const languages = ["python", "javascript", "java"];
-const frameworks = ["react", "next.js, numpy", "pandas", "pytorch"];
+const frameworks = ["react", "next.js", "numpy", "pandas", "pytorch"];
 const models = ["tensorflow", "cuda", "huggingface"];
+const apis = ["aws", "ec2", "azure", "terraform", "databricks", "lambda"];
 const domains = [
   "visualization",
   "research",
@@ -12,6 +13,7 @@ const domains = [
   "analysis",
   "forecasting",
   "ment",
+  "ics",
 ];
 
 export default function DisplayTraits() {
@@ -29,6 +31,9 @@ export default function DisplayTraits() {
   const modelSkills = traits.filter((trait) =>
     models.some((model) => trait.toLowerCase().includes(model))
   );
+  const apiSkills = traits.filter((trait) =>
+    apis.some((api) => trait.toLowerCase().includes(api))
+  );
   const domainSkills = traits.filter((trait) =>
     domains.some((domain) => trait.toLowerCase().includes(domain))
   );
@@ -38,13 +43,15 @@ export default function DisplayTraits() {
         languageSkills.includes(trait) ||
         modelSkills.includes(trait) ||
         domainSkills.includes(trait) ||
-        frameworkSkills.includes(trait)
+        frameworkSkills.includes(trait) ||
+        apiSkills.includes(trait)
       )
   );
   const skillsData = [
     languageSkills.length,
     modelSkills.length,
     frameworkSkills.length,
+    apiSkills.length,
     otherTraits.length,
   ];
 
@@ -90,6 +97,19 @@ export default function DisplayTraits() {
               <div className="m-2 text-xl text-teal-700"> Frameworks</div>
               <div>
                 {frameworkSkills.map((trait, index) => (
+                  <li key={index}> {trait}</li>
+                ))}
+              </div>
+            </div>
+          </div>
+        )}
+        {/* apis */}
+        {apiSkills.length > 0 && (
+          <div className="p-2 pl-5 pb-5 border shadow rounded-xl mb-3">
+            <div>
+              <div className="m-2 text-xl text-teal-700"> APIs</div>
+              <div>
+                {apiSkills.map((trait, index) => (
                   <li key={index}> {trait}</li>
                 ))}
               </div>
