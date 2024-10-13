@@ -1,5 +1,7 @@
 This is the GITHUB page for ResuRect, a project by the HTML Heroes for PSA Codesprint 2024. 
 
+Live Website: https://resurect.vercel.app
+
 ResuRect
 ResuRect is an innovative platform designed to help you optimize your resume with ease. Simply upload your resume and receive valuable insights into your skills and abilities, along with targeted recommendations to improve your resume and stand out in today's competitive job market.
 
