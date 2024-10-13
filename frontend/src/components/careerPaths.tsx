@@ -3,9 +3,8 @@ import { useUpload } from "@/context/UploadContext";
 
 export default function CareerPaths() {
   const { uploadResult } = useUpload();
-  const path: String = uploadResult.predicted_job_role;
-  const roles: String[] = uploadResult.potential_roles;
-  const recommendations: String[] = uploadResult.recommendations;
+  const path: string = uploadResult.predicted_job_role;
+  const roles: string[] = uploadResult.potential_roles;
 
   return (
     <div className="m-2 px-5 py-2 text-teal-400 font-bold border-2 shadow rounded-xl w-full text-2xl">

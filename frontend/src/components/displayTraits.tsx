@@ -19,7 +19,7 @@ const domains = [
 export default function DisplayTraits() {
   const { uploadResult } = useUpload();
 
-  const traits: String[] = uploadResult.extracted_skills;
+  const traits: string[] = uploadResult.extracted_skills;
 
   const languageSkills = traits.filter((trait) =>
     languages.some((language) => trait.toLowerCase().includes(language))

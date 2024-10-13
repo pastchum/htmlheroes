@@ -1,15 +1,11 @@
 import { useUpload } from "@/context/UploadContext";
 
-interface RecommendationProps {
-  recommendations: String[];
-}
-
 export default function Recommendations() {
   const { uploadResult } = useUpload();
   const recommendations: any = uploadResult.recommendations[0];
   console.log(recommendations);
-  const certifications: String[] = recommendations.certifications;
-  const missingSkills: String[] = recommendations.missing_skills;
+  const certifications: string[] = recommendations.certifications;
+  const missingSkills: string[] = recommendations.missing_skills;
 
   return (
     <div className="m-2 px-5 py-2 text-teal-400 font-bold border-2 shadow rounded-xl w-full text-2xl">
