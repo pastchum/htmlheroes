@@ -48,7 +48,11 @@ export default function UploadForm() {
     }
   };
 
-  return (
+  return uploading ? (
+    <div className="justify-center align-center flex flex-col w-full p-3 rounded-xl border shadow h-full m-5">
+      <div className="text-teal-500 text-3xl font-bold">Loading...</div>
+    </div>
+  ) : (
     <div className="justify-start flex flex-col w-full p-3 rounded-xl border shadow h-full m-5">
       <div className="font-bold mx-5 my-2">Upload your resume here!</div>
       <div className="m-2 mx-5 border rounded-xl p-2 justify-center align-center flex">
