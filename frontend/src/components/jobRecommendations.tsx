@@ -2,6 +2,7 @@ import { useUpload } from "@/context/UploadContext";
 
 export default function Recommendations() {
   const { uploadResult } = useUpload();
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const recommendations: any = uploadResult.recommendations[0];
   console.log(recommendations);
   const certifications: string[] = recommendations.certifications;

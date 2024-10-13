@@ -8,10 +8,12 @@ export default function UploadForm() {
   const [uploading, setUploading] = useState(false);
   const { setUploadResult } = useUpload();
 
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const handleFileChange = (event: any) => {
     setFile(event.target.files[0]);
   };
 
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const handleSubmit = async (event: any) => {
     event.preventDefault();
     if (!file) {

@@ -86,7 +86,7 @@ const RadarChart = ({ skillsData }: SkillsDataProps) => {
         chartInstanceRef.current = null;
       }
     };
-  }, []);
+  }, [maxVal, skillsData]);
 
   return (
     <canvas

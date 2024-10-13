@@ -4,7 +4,7 @@ import DisplayResults from "@/components/displayResults";
 import Instructions from "@/components/instructions";
 import UploadForm from "@/components/uploadForm";
 import { useUpload } from "@/context/UploadContext";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 
 export default function Home() {
   const { uploadResult } = useUpload();

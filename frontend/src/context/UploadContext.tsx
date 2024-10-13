@@ -7,7 +7,9 @@ interface UploadProviderProps {
 }
 
 interface UploadContextType {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   uploadResult: any;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   setUploadResult: React.Dispatch<React.SetStateAction<any>>;
 }
 
