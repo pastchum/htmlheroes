@@ -1,6 +1,6 @@
 export default function Instructions() {
   return (
-    <div className="p-3 w-full h-full border rounded-xl mx-5 shadow relative">
+    <div className="p-3 w-full md:max-h-[calc(100vh-200px)] max-h-[calc(100vh-400px)] border rounded-xl shadow relative overflow-y-auto no-scrollbar mx-5 md:my-5">
       <div className="m-5">
         <div className="border shadow-xl rounded-xl px-5 pt-5 pb-2">
           <div className="text-teal-700 text-3xl font-bold">

@@ -7,7 +7,7 @@ export default function Header() {
             <h1>Resu</h1>
             <div className="font-extrabold text-teal-500">RECT</div>
           </div>
-          Rectify Your Resume
+          Rectify Your Resume.
         </div>
       </div>
     </header>

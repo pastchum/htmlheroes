@@ -36,11 +36,11 @@ export default function UploadForm() {
   };
 
   return (
-    <div className="justify-start flex flex-col w-full p-3 rounded-xl border shadow h-full">
+    <div className="justify-start flex flex-col w-full p-3 rounded-xl border shadow h-full m-5">
       <div className="font-bold mx-5 my-2">Upload your resume here!</div>
       <div className="m-2 mx-5 border rounded-xl p-2 justify-center align-center flex">
         <div className="text-teal-300 text-xs flex-col flex">
-          <form className="flex flex-col">
+          <form className="flex flex-col my-2">
             <input
               className={`${file ? "text-slate-500" : "text-red-500"}`}
               type="file"
