@@ -1,8 +1,5 @@
 import RadarChart from "./radarChart";
-
-interface DisplayTraitsProps {
-  traits: string[];
-}
+import { useUpload } from "@/context/UploadContext";
 
 const languages = ["python", "javascript", "java"];
 const frameworks = ["react", "next.js, numpy", "pandas", "pytorch"];
@@ -17,7 +14,11 @@ const domains = [
   "ment",
 ];
 
-export default function DisplayTraits({ traits }: DisplayTraitsProps) {
+export default function DisplayTraits() {
+  const { uploadResult } = useUpload();
+
+  const traits: String[] = uploadResult.extracted_skills;
+
   const languageSkills = traits.filter((trait) =>
     languages.some((language) => trait.toLowerCase().includes(language))
   );

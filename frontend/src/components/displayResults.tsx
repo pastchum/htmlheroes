@@ -8,10 +8,6 @@ import CareerPaths from "./careerPaths";
 export default function DisplayResults() {
   const { uploadResult, setUploadResult } = useUpload();
   console.log("data: " + JSON.stringify(uploadResult));
-  const traits = uploadResult.extracted_skills;
-  const path = uploadResult.predicted_job_role;
-  const roles = uploadResult.potential_roles;
-  console.log("traits: " + traits);
 
   const handleNewUploadRequest = () => {
     setUploadResult(null);
@@ -33,9 +29,9 @@ export default function DisplayResults() {
         </button>
       </div>
       <div className="flex flex-col md:flex-row justify-items-stretch">
-        <DisplayTraits traits={traits} />
+        <DisplayTraits />
         <div className="flex flex-col justify-items-stretch">
-          <CareerPaths path={path} roles={roles} />
+          <CareerPaths />
         </div>
       </div>
       <div className="flex flex-row-reverse">
