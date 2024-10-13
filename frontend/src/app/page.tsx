@@ -12,7 +12,7 @@ export default function Home() {
 
   return (
     <div className="justify-stretch font-[family-name:var(--font-geist-sans)] ">
-      <main className="flex flex-col gap-8 row-start-2 items-stretch sm:items-start">
+      <main className="flex flex-col gap-8 row-start-2 items-stretch sm:items-start mb-10">
         {uploadResult ? (
           <DisplayResults />
         ) : (

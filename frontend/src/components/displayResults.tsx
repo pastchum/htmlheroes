@@ -1,11 +1,16 @@
 "use client";
 
+import React from "react";
 import { useUpload } from "@/context/UploadContext";
+import DisplayTraits from "./displayTraits";
+import CareerPaths from "./careerPaths";
 
 export default function DisplayResults() {
   const { uploadResult, setUploadResult } = useUpload();
-  console.log("data: " + uploadResult);
-  const traits = uploadResult.extractedSkills;
+  console.log("data: " + JSON.stringify(uploadResult));
+  const traits = uploadResult.extracted_skills;
+  const path = uploadResult.predicted_job_role;
+  const roles = uploadResult.potential_roles;
   console.log("traits: " + traits);
 
   const handleNewUploadRequest = () => {
@@ -13,20 +18,32 @@ export default function DisplayResults() {
   };
 
   return (
-    <div className="w-full h-full border-2 m-2 rounded-xl shadow">
+    <div className="w-full h-full border-2 m-2 rounded-xl shadow md:overflow-y-auto md: h-100vh">
       <div className="justify-between flex-row flex">
         <div className="p-2 text-4xl text-slate-700 font-extrabold flex">
           YOUR <div className="text-teal-500 px-2"> RESUME</div>
         </div>
-        <button onClick={handleNewUploadRequest}>
+        <button
+          onClick={handleNewUploadRequest}
+          className="md:visible invisible"
+        >
           <div className="m-4 border-2 p-2 rounded-xl bg-teal-400 text-slate-100 font-bold">
             Upload Another Resume
           </div>
         </button>
       </div>
-      <div className="m-2 px-5 py-2 text-teal-400 font-bold border-2 shadow rounded-xl w-1/2">
-        KEY TRAITS
-        <div className="m-2 text-md text-slate-400">{traits}</div>
+      <div className="flex flex-col md:flex-row justify-items-stretch">
+        <DisplayTraits traits={traits} />
+        <div className="flex flex-col justify-items-stretch">
+          <CareerPaths path={path} roles={roles} />
+        </div>
+      </div>
+      <div className="flex flex-row-reverse">
+        <button onClick={handleNewUploadRequest} className="md:hidden">
+          <div className="m-4 border-2 p-2 rounded-xl bg-teal-400 text-slate-100 font-bold">
+            Upload Another Resume
+          </div>
+        </button>
       </div>
     </div>
   );
